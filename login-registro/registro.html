@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>REGISTRO DE USUARIO</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="registro-card">
+                    <h1 class="text-center mb-3"><i class="bi bi-person-plus"></i> REGISTRO</h1>
+                    <form>
+                        <div class="row g-2">
+                            <!-- Nombres -->
+                            <div class="col-md-6 mb-2">
+                                <label for="nombres" class="form-label"><i class="bi bi-person"></i> Nombres:</label>
+                                <input type="text" class="form-control form-control-sm" id="nombres" placeholder="Nombres">
+                            </div>
+
+                            <!-- Apellidos -->
+                            <div class="col-md-6 mb-2">
+                                <label for="apellidos" class="form-label"><i class="bi bi-person"></i> Apellidos:</label>
+                                <input type="text" class="form-control form-control-sm" id="apellidos" placeholder="Apellidos">
+                            </div>
+                        </div>
+
+                        <!-- nombre de usuario -->
+                        <div class="mb-2">
+                            <label for="username" class="form-label"><i class="bi bi-at"></i> Usuario:</label>
+                            <input type="text" class="form-control form-control-sm" id="username" placeholder="Usuario único">
+                        </div>
+
+                        <!-- Correo Electrónico -->
+                        <div class="mb-2">
+                            <label for="email" class="form-label"><i class="bi bi-envelope"></i> Correo:</label>
+                            <input type="email" class="form-control form-control-sm" id="email" placeholder="correo@ejemplo.com">
+                        </div>
+
+                        <!-- País -->
+                        <div class="mb-2">
+                            <label for="pais" class="form-label"><i class="bi bi-geo-alt"></i> País:</label>
+                            <select class="form-control form-control-sm" id="pais">
+                                <option value="">Selecciona tu país</option>
+                                <option value="Ecuador" data-code="+593">Ecuador</option>
+                                <option value="Perú" data-code="+51">Perú</option>
+                                <option value="Colombia" data-code="+57">Colombia</option>
+                                <option value="Chile" data-code="+56">Chile</option>
+                                <option value="Argentina" data-code="+54">Argentina</option>
+                                <option value="Bolivia" data-code="+591">Bolivia</option>
+                                <option value="Paraguay" data-code="+595">Paraguay</option>
+                                <option value="Uruguay" data-code="+598">Uruguay</option>
+                                <option value="Venezuela" data-code="+58">Venezuela</option>
+                                <option value="Brasil" data-code="+55">Brasil</option>
+                                <option value="Guatemala" data-code="+502">Guatemala</option>
+                                <option value="Honduras" data-code="+504">Honduras</option>
+                                <option value="El Salvador" data-code="+503">El Salvador</option>
+                                <option value="Nicaragua" data-code="+505">Nicaragua</option>
+                                <option value="Costa Rica" data-code="+506">Costa Rica</option>
+                                <option value="Panamá" data-code="+507">Panamá</option>
+                            </select>
+                        </div>
+
+                        <!-- Teléfono -->
+                        <div class="row g-2">
+                            <div class="col-md-4 mb-2">
+                                <label for="codigoTelefono" class="form-label"><i class="bi bi-telephone"></i> Código:</label>
+                                <input type="text" class="form-control form-control-sm" id="codigoTelefono" placeholder="+xxx" readonly>
+                            </div>
+                            <div class="col-md-8 mb-2">
+                                <label for="telefono" class="form-label">Teléfono:</label>
+                                <input type="tel" class="form-control form-control-sm" id="telefono" placeholder="9876543210">
+                            </div>
+                        </div>
+
+                        <!-- Contraseña -->
+                        <div class="row g-2">
+                            <div class="col-md-6 mb-2">
+                                <label for="password" class="form-label"><i class="bi bi-lock"></i> Contraseña:</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" class="form-control" id="password" placeholder="Mín. 8 caracteres">
+                                    <button class="btn btn-outline-light" type="button" id="togglePassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                                <small class="form-text text-muted">8+ caracteres, mayúscula y número.</small>
+                            </div>
+
+                            <!-- Verificación de contraseña -->
+                            <div class="col-md-6 mb-2">
+                                <label for="confirmPassword" class="form-label"><i class="bi bi-lock"></i> Verificar:</label>
+                                <div class="input-group input-group-sm">
+                                    <input type="password" class="form-control" id="confirmPassword" placeholder="Repite contraseña">
+                                    <button class="btn btn-outline-light" type="button" id="toggleConfirmPassword">
+                                        <i class="bi bi-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón de registro -->
+                        <div class="text-center mt-3">
+                            <button type="submit" class="btn btn-primary btn-registro btn-sm"><i class="bi bi-person-plus"></i> Registrar</button>
+                        </div>
+
+                        <!-- Login -->
+                        <div class="text-center mt-2">
+                            <p class="small">¿Ya tienes cuenta? <a href="login.html">Inicia sesión</a></p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>
